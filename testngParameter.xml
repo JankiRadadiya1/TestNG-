@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="paramterization testngxml Suite">         
+<test name="paramterization test">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name ="url" value="https://www.facebook.com/"/>
+    <parameter name="emailid" value="jankiradadiya23@gmail.com"/>
+    <parameter name="password" value="Janki@1410"/>
+      <classes>
+      <class name="TestNG_xml_parameterization.Intro_testNgxml"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

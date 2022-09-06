@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test">
+  
+  <groups>
+  
+  <!--  <define  name="TwilightTestCasesGroup">            :- META grouping-> we can define here what we want to run give name to define and pass test cases  
+    <include name="regression"></include>
+    <include name = "sanity"></include>
+    </define>-->
+  
+  <run>
+  <include name ="CompleteClassLevelTest"/>     <!-- This is Class level Group just include it run all the test cases inside class-->
+  <include name = "windows.*"/>                 <!--  :-Regular experssion pass windows.* to run all the windows test cases --> 
+  <include name = "linux.*"/>
+<!--<include name = "TwilightTestCasesGroup"/>     :- pass include inside run just pass define name and it will include all tc whch is inside define   
+   <include name = "smoke"/>      
+  <include name ="sanity"/>                                           
+  <exclude name="regression"/>                                        more priorty to exclude over include -->
+  
+  </run>
+  </groups>
+  
+    <classes>
+      <class name="Groups_TestNG.Group_Concept"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
